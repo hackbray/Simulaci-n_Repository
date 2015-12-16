@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage[spanish,USenglish]{babel}
+\usepackage{graphicx}
+\title{Turorial de Vensim}
+\author{Brayan Piñeros Mondragón, hackbray@gmail.com}
+
+\begin{document}
+\maketitle
+\section{Objetivos}
+\label{sec:objetivo}
+Simular y analizar modelos poblacionales que estudian el crecimiento poblacional utilizando el programa de simulación basado en dinamica de sistemas Vensim.
+\section{Procedimiento}
+\label{sec:procedimiento}
+\textbf{Flujos de entrada y salida}:
+\\
+1.\hspace{0,2cm} Se crea un Box Variable con el nombre de población, que representa la cantidad de personas que entran al sistema por medio de nacimientos, inmigración, etc.
+\\ \\
+2.\hspace{0,2cm}Creamos un flujo de entrada para población con el nombre nacimientos y lo relacionamos con población.
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{pob}
+\par\end{centering}
+\protect\caption{\label{fig:pob}Población }
+\end{figure}
+
+3.\hspace{0,2cm} Se coloca como valor inicial a población de 5000 y a nacimientos 150 con unidades de personas/año. Para colocar valores  se selecciona el elemento y oprimiendo click derecho se selecciona ecuación.
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{poblacion}
+\par\end{centering}
+\protect\caption{\label{fig:poblacion} Valores de población }
+\end{figure}
+\\ \\
+4.\hspace{0,2cm} Se oprime el boton de correr simulación que es un play y  luego en el botón de graficas, haciendose lo anterior se observa lo siguiente:
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{grafica}
+\par\end{centering}
+\protect\caption{\label{fig:grafica} Grafica Población }
+\end{figure}
+\\ \\
+5. Se agrega un flujo de salida que va a representar las muertes de la población. Se utiliza la misma herramienta que se uso para agregar el flujo de entrada de nacimientos.
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{muertes}
+\par\end{centering}
+\protect\caption{\label{fig:muertes} Muertes }
+\end{figure}
+\\ \\
+6.Se coloca 75 como valor para Muertes con unidades personas/año.
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{grafica2}
+\par\end{centering}
+\protect\caption{\label{fig:grafica2} Grafica Población }
+\end{figure}
+\\ \\
+7.Luego se modican los valores iniciales de nacimientos y muertes colocando 50 y 125:
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{grafica3}
+\par\end{centering}
+\protect\caption{\label{fig:grafica3} Grafica Población }
+\end{figure}
+\\ \\
+\textbf{Retroalimentación (Feed Back)}
+\\ \\
+8.Para crear la retroalimentación de nacimientos y muertes se utiliza el botón Arrow:
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{siguiente}
+\par\end{centering}
+\protect\caption{\label{fig:retro} Retroalimentación }
+\end{figure}
+\\ \\
+9. Ya que la tasa de nacimientos y la tasa de muertes realmente no es constante en el tiempo, es necesario crear una variable que interactué con la población y determine los nacimientos y muertes. Para crear las variables oprimimos en el botón Variable y luego relacionamos las variables con los flujos de nacimientos y muertes.
+\begin{figure}
+\begin{centering}
+\includegraphics[width=1\columnwidth]{fraccion}
+\par\end{centering}
+\protect\caption{\label{fig:fraccion} Población }
+\end{figure}
+\end{document}
